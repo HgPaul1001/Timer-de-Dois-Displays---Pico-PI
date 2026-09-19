@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": { "env": "micropython-20260406-v1.28.0" }
+    },
+    { "type": "wokwi-7segment", "id": "sevseg1", "top": -43.02, "left": -119.72, "attrs": {} },
+    { "type": "wokwi-7segment", "id": "sevseg2", "top": -43.02, "left": -215.72, "attrs": {} }
+  ],
+  "connections": [
+    [ "pico:GP0", "sevseg1:A", "green", [ "h-63.6", "v-60.75", "h-28.8" ] ],
+    [ "pico:GP1", "sevseg1:B", "green", [ "h-73.2", "v-60.75", "h-9.6" ] ],
+    [ "pico:GND.1", "sevseg1:COM.1", "black", [ "h-73.2", "v6.45", "h-28.8" ] ],
+    [ "pico:3V3", "sevseg1:COM.2", "red", [ "h14.4", "v-108.75", "h-182.4" ] ],
+    [ "pico:3V3", "sevseg2:COM.2", "red", [ "h14.4", "v-108.75", "h-278.4" ] ],
+    [ "pico:GP2", "sevseg1:C", "green", [ "h-92.4", "v6.45" ] ],
+    [ "pico:GP3", "sevseg1:D", "green", [ "h-111.6", "v-3.15" ] ],
+    [ "pico:GP4", "sevseg1:E", "green", [ "h0" ] ],
+    [ "pico:GP5", "sevseg1:F", "green", [ "h-130.8", "v-118.35", "h19.2" ] ],
+    [ "pico:GP6", "sevseg1:G", "green", [ "h-140.4", "v-127.95" ] ],
+    [ "pico:GP7", "sevseg2:A", "green", [ "h-159.6", "v-147.15", "h-28.8" ] ],
+    [ "pico:GP8", "sevseg2:B", "green", [ "h-169.2", "v-3.15" ] ],
+    [ "pico:GP9", "sevseg2:C", "green", [ "h0" ] ],
+    [ "pico:GND.3", "sevseg2:COM.1", "black", [ "h0" ] ],
+    [ "pico:GP10", "sevseg2:D", "green", [ "h0" ] ],
+    [ "pico:GP11", "sevseg2:E", "green", [ "h0" ] ],
+    [ "pico:GP12", "sevseg2:F", "green", [ "h-236.4", "v-204.75", "h28.8" ] ],
+    [ "pico:GP13", "sevseg2:G", "green", [ "h-226.8", "v-3.15" ] ]
+  ],
+  "dependencies": {}
+}
